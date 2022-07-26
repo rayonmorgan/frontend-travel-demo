@@ -17,6 +17,6 @@ export class AppComponent implements OnInit {
   title = 'frontend-travel-demo';
 
   ngOnInit(): void {
-     this.flightservice.getFlight();
+   //  this.flightservice.getFlight();
   }
 }

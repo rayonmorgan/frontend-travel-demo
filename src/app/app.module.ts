@@ -5,17 +5,23 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainheaderComponent } from './mainheader/mainheader.component';
+import { ContainerComponent } from './container/container.component';
+import { FindFlightComponent } from './find-flight/find-flight.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainheaderComponent
+    MainheaderComponent,
+    ContainerComponent,
+    FindFlightComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-	  HttpClientModule
+	  HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

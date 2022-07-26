@@ -13,5 +13,8 @@ export class FlightsService {
     alert('hello service');
   }
 
+  findFlight(depart:String,arrive:String){
+    console.log(depart + ' ' + arrive);
+  }
 
 }

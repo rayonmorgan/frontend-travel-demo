@@ -1,0 +1,47 @@
+<div>
+    <p>        
+        Welcome to the Simple Travel Agency!
+    </p>
+
+    <p>
+        The is a sample site you can test with BlazeMeter!
+    </p>    
+
+    <p>    
+        Check out our destination of the week! The Beach!
+    </p>
+   
+    <div>
+        <form #myform="ngForm" (ngSubmit)="submitform(myform)">
+            <span><em>Choose your departure city:</em></span>
+            <br/>             
+            <select  #vadepature="ngModel"   name="depature" class="form-control" ngModel>     
+                <option value="Paris">Paris</option>
+                <option value="Philadelphia">Philadelphia</option>
+                <option value="Boston">Boston</option>
+                <option value="Portland">Portland</option>
+                <option value="San Diego">San Diego</option>
+                <option value="Mexico City">Mexico City</option>
+                <option value="São Paolo">São Paolo</option>       
+            </select>
+            <br/>
+            <pre></pre>
+            <span><em>Choose your destination city:</em></span>
+            <br/>
+            
+            <select #vaarrival="ngModel"   name="arrival" class="form-control" ngModel>
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Rome">Rome</option>
+                <option value="London">London</option>
+                <option value="Berlin">Berlin</option>
+                <option value="New York">New York</option>
+                <option value="Dublin">Dublin</option>
+                <option value="Cairo">Cairo</option>        
+            </select>
+            <br/>
+            <pre></pre>
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+    </div>
+   
+</div>
