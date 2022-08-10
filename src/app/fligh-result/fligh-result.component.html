@@ -1,0 +1,28 @@
+<table>
+   <thead>
+         
+        <th>Chose</th>
+        <th>Flight#</th>
+        <th>Airline</th>
+        <th>Departs: <span></span></th>
+        <th>Arrives: <span></span></th>
+        <th>Price</th>        
+   </thead>
+   <tbody>
+        <tr *ngFor="let flight of flightList">
+            <td>
+                <button type="submit" class="btn btn-primary" (click)="onChoseFlight($event,flight)">
+                    Chose This Flight
+                </button>
+            </td>
+            <td>{{flight.flightNumber}}</td>         
+            <td>{{flight.airline}}</td>
+            <td>{{flight.departTime}}</td>
+            <td>{{flight.arriveTime}}</td>
+            <td>{{flight.price}}</td>
+        </tr>
+
+
+   </tbody>
+</table>
+ 

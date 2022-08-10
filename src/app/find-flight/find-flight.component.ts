@@ -16,7 +16,12 @@ export class FindFlightComponent implements OnInit {
   }
 
   submitform(inputval:NgForm){
-   this.flightservice.findFlight(inputval.value['depature'],inputval.value['arrival'])
-  }
+/*    this.flightservice.findFlight(inputval.value['depature'],inputval.value['arrival'])
+   .subscribe(data=> console.log(data),  error => console.log(error)); */
+     //set departure and arrival value in service
+     this.flightservice.setSearchFlightDetails(inputval.value['depature'],inputval.value['arrival']);
+      //route to the display flight result page
+
+    }
 
 }
