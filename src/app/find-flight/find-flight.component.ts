@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, NgForm, NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FlightsService } from '../service/flights.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { FlightsService } from '../service/flights.service';
 })
 export class FindFlightComponent implements OnInit {
 
-  constructor(private flightservice: FlightsService) { }
+  constructor(private flightservice: FlightsService,private rounter: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +22,11 @@ export class FindFlightComponent implements OnInit {
      //set departure and arrival value in service
      this.flightservice.setSearchFlightDetails(inputval.value['depature'],inputval.value['arrival']);
       //route to the display flight result page
+
+      console.log('Form Submitted:- Injected service called.');
+
+      //route site to result page/component
+      this.rounter.navigate(['flightresult']);
 
     }
 
