@@ -9,6 +9,7 @@ import { ContainerComponent } from './container/container.component';
 import { FindFlightComponent } from './find-flight/find-flight.component';
 import { FormsModule } from '@angular/forms';
 import { FlighResultComponent } from './fligh-result/fligh-result.component';
+import { PurchaseFlightComponent } from './purchase-flight/purchase-flight.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FlighResultComponent } from './fligh-result/fligh-result.component';
     MainheaderComponent,
     ContainerComponent,
     FindFlightComponent,
-    FlighResultComponent
+    FlighResultComponent,
+    PurchaseFlightComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+<p>purchase-flight works!</p>
+<div>
+    <form #purchase="ngForm" (ngSubmit)="makePurchase($event,purchase)">
+        <label for="fullname">Name</label>
+        <br/>
+        <input type="text" #fullname="ngModel" name="fullname" placeholder="First Last" ngModel/>
+        <br/>
+        <label>Address</label>
+        <br/>
+        <input type="text" #address="ngModel" name="address" placeholder="123 Main St." ngModel/>
+        <input type="text" #city="ngModel" name="city" placeholder="Anytown" ngModel/>
+        <input type="text" #state="ngModel" name="state" placeholder="State" ngModel/>
+        <input type="text" #zipcode="ngModel" name="zipcode" placeholder="12345" ngModel/>
+        <select #cardtype="ngModel" name="cardtype" ngModel>
+            <option selected>Visa</option>
+            <option>American Express</option>
+            <option>Diner's Club</option>
+        </select>
+        <input type="number" #ccnumber="ngModel" name="ccnumber" placeholder="Credit Card Number" ngModel/>
+        <input type="number" #month="ngModel" name="month" placeholder="10" ngModel/>
+        <input type="number" #year="ngModel" name="year" placeholder="2022" ngModel/>
+        <input type="text" nameoncard="ngModel" name="nameoncard" placeholder="John Blue" ngModel/>
+        <input type="checkbox" #rememberme="ngModel" name="rememberme" value="rememberme" ngModel/>
+         
+        <button type="submit" class="btn btn-primary">Purchase Flight</button>
+    </form>    
+
+</div>
+ 

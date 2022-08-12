@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ISearchFlight } from '../Model/flight.model';
 import {FlightsService} from '../service/flights.service';
 
@@ -13,7 +14,7 @@ export class FlighResultComponent implements OnInit {
   flightList :ISearchFlight[] = [];
 
 
-  constructor(private flightservice:FlightsService) { }
+  constructor(private flightservice:FlightsService,private router:Router) { }
 
   ngOnInit(): void {
  /*    this.flightList.push({
@@ -29,11 +30,12 @@ export class FlighResultComponent implements OnInit {
       this.flightList = data
     );
 
-    console.log(this.flightList);
+    
   }
 
     onChoseFlight(event:Event,flight:any){
-   
+      
+      this.router.navigate(["purchase"]);
   }
 
 }
