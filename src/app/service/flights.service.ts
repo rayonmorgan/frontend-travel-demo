@@ -10,11 +10,23 @@ export class FlightsService {
   searchFlightUrl:String = 'http://localhost:8080/api/flight';
   depart:string;
   arrive:string;
+  selectFlight:ISearchFlight;
+   
   
 
   constructor(private httpclient: HttpClient) { 
     this.depart = '';
-    this.arrive = ''
+    this.arrive = '';
+    this.selectFlight = {
+      flightNumber: 0,
+      airline:'',
+      fromPort: '',
+      toPort:'',
+      price:0,
+      departTime:'',
+      arriveTime:''
+      
+    }     
   }
 
   setSearchFlightDetails(depart:string,arrive:string):void{
@@ -39,14 +51,23 @@ export class FlightsService {
  
   }
 
+  //update the selected flight
+  setSelectedFlight(isearchFlight:ISearchFlight) 
+  {
+      this.selectFlight = isearchFlight;    
+  }
+
+  //get selected slight
+  /**
+   * @return - return current user selected flight
+   */
+  getSeletedFlight():ISearchFlight
+  {     
+    return this.selectFlight;
+  }
+
+
+
 }
 
-// interface ISearchFlight{
-//   flightNumber:number;
-//   airline:String;
-//   fromPort:String;
-//   toPort:String;
-//   price:number;
-//   departTime:String;
-//   arriveTime:String
-// }
+

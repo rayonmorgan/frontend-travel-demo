@@ -1,0 +1,37 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    width: 100%;
+}
+
+ul > li{
+    display: inline;   
+    padding-right: 20px; 
+}
+
+ li > a{
+    text-decoration: none;
+    color:rgb(153, 153, 153);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 1221.33px
+ }
+
+ li > a:hover{
+    color: ghostwhite;
+ }
+
+ .headerDiv{
+    background-color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 13px 0px 13px 0px;
+    border-radius: 4px;
+ }
+
+ .inner-header-div{
+    padding-left: 10px;
+ }

@@ -1,0 +1,26 @@
+.flight-main{
+    margin: 40px;
+}    
+ 
+select {
+  width: 220px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  height: 30px;
+  border-radius: 4px;  
+ 
+}
+ 
+.btn{
+    color: #fbfbfc;
+    padding: 4px 12px;
+    font-size: 14px;
+    border-radius: 4px; 
+    line-height: 20px;
+    border-color: rgb(0, 68, 204);
+    background-image:  linear-gradient(rgb(0, 136, 204), rgb(0, 68, 204));
+}
+
+.btn-primary{
+     cursor: pointer;
+}

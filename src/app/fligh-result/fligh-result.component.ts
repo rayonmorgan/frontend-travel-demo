@@ -33,8 +33,9 @@ export class FlighResultComponent implements OnInit {
     
   }
 
-    onChoseFlight(event:Event,flight:any){
+    onChoseFlight(event:Event,flight:ISearchFlight){
       
+      this.flightservice.setSelectedFlight(flight)
       this.router.navigate(["purchase"]);
   }
 

@@ -1,20 +1,20 @@
-<div>
-    <p>        
+<div class="flight-main">
+    <h1>        
         Welcome to the Simple Travel Agency!
-    </p>
+    </h1>
 
     <p>
         The is a sample site you can test with BlazeMeter!
     </p>    
 
     <p>    
-        Check out our destination of the week! The Beach!
+        Check out our <a href="/vacation">destination of the week! The Beach!</a>
     </p>
    
     <div>
         <form #myform="ngForm" (ngSubmit)="submitform(myform)">
-            <span><em>Choose your departure city:</em></span>
-            <br/>             
+            <h2> Choose your departure city: </h2> 
+                       
             <select  #vadepature="ngModel"   name="depature" class="form-control" ngModel>     
                 <option value="Paris">Paris</option>
                 <option value="Philadelphia">Philadelphia</option>
@@ -26,8 +26,8 @@
             </select>
             <br/>
             <pre></pre>
-            <span><em>Choose your destination city:</em></span>
-            <br/>
+            <h2> Choose your destination city: </h2> 
+             
             
             <select #vaarrival="ngModel"   name="arrival" class="form-control" ngModel>
                 <option value="Buenos Aires">Buenos Aires</option>
@@ -40,7 +40,7 @@
             </select>
             <br/>
             <pre></pre>
-            <button type="submit" class="btn btn-primary">submit</button>
+            <button type="submit" class="btn btn-primary">Find Flights</button>
         </form>
     </div>
    

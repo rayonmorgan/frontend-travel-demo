@@ -1,4 +1,19 @@
-<p>purchase-flight works!</p>
+ 
+<div>
+    <h2>Your flight from {{selectFlight.fromPort}} to {{selectFlight.toPort}} has been reserved.</h2>
+
+    Airline: {{selectFlight.airline}}
+    <br/>
+    Flight Number: {{selectFlight.flightNumber}} 
+    <br/>
+    Price: {{selectFlight.price}} 
+    <br/>
+    Arbitrary Fees and Taxes:{{taxprice}}
+    <br/>
+    Total Cost: {{totalprice}}
+    <br/>
+    Please submit the form below to purchase the flight.
+</div>
 <div>
     <form #purchase="ngForm" (ngSubmit)="makePurchase($event,purchase)">
         <label for="fullname">Name</label>
@@ -6,24 +21,49 @@
         <input type="text" #fullname="ngModel" name="fullname" placeholder="First Last" ngModel/>
         <br/>
         <label>Address</label>
-        <br/>
+        <br/>      
         <input type="text" #address="ngModel" name="address" placeholder="123 Main St." ngModel/>
+        <br/>
+        <label for="">City</label>
+        <br/>
         <input type="text" #city="ngModel" name="city" placeholder="Anytown" ngModel/>
+        <br/>
+        <label for="">State</label>
+        <br/>
         <input type="text" #state="ngModel" name="state" placeholder="State" ngModel/>
+        <br/>
+        <label for="">Zip Code</label>
+        <br/>
         <input type="text" #zipcode="ngModel" name="zipcode" placeholder="12345" ngModel/>
+        <br />
+        <label for="">Card Type</label>
+        <br/>
         <select #cardtype="ngModel" name="cardtype" ngModel>
-            <option selected>Visa</option>
+            <option>Visa</option>
             <option>American Express</option>
             <option>Diner's Club</option>
         </select>
-        <input type="number" #ccnumber="ngModel" name="ccnumber" placeholder="Credit Card Number" ngModel/>
-        <input type="number" #month="ngModel" name="month" placeholder="10" ngModel/>
-        <input type="number" #year="ngModel" name="year" placeholder="2022" ngModel/>
+        <br/>
+        <label for="">Credit Card Number</label>
+        <br/>
+        <input type="text" #ccnumber="ngModel" name="ccnumber" placeholder="Credit Card Number" ngModel/>
+        <br/>
+        <label for="">Month</label>
+        <br/>
+        <input type="text" #month="ngModel" name="month" placeholder="10" ngModel/>
+        <br/>
+        <label for="">Year</label>
+        <br/>
+        <input type="text" #year="ngModel" name="year" placeholder="2022" ngModel/>
+        <br/>
+        <label for="">Name on Card</label>
+        <br/>
         <input type="text" nameoncard="ngModel" name="nameoncard" placeholder="John Blue" ngModel/>
+        <br/>
         <input type="checkbox" #rememberme="ngModel" name="rememberme" value="rememberme" ngModel/>
-         
+        <label for="">Remember me</label>
+        <br/>
         <button type="submit" class="btn btn-primary">Purchase Flight</button>
-    </form>    
-
+    </form>   
 </div>
  
