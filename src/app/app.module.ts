@@ -10,6 +10,8 @@ import { FindFlightComponent } from './find-flight/find-flight.component';
 import { FormsModule } from '@angular/forms';
 import { FlighResultComponent } from './fligh-result/fligh-result.component';
 import { PurchaseFlightComponent } from './purchase-flight/purchase-flight.component';
+import { VacationComponent } from './vacation/vacation.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { PurchaseFlightComponent } from './purchase-flight/purchase-flight.compo
     ContainerComponent,
     FindFlightComponent,
     FlighResultComponent,
-    PurchaseFlightComponent
+    PurchaseFlightComponent,
+    VacationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

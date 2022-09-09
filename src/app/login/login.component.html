@@ -1,0 +1,37 @@
+<div>
+    <div>
+       <form #logForm="ngForm" >
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="username">Email address/Mobile number</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="username" name="username" #usesrname="ngModel" ngModel/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <span> <label for="password">Password</label> </span> 
+                            <span class="forget-me" >
+                                <a href="#">Forget me</a>
+                            </span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" id="password" name="password" #password="ngModel" ngModel>
+                        </td>
+                    </tr>
+                    <tr>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </tr>
+                </tbody>
+            </table>
+
+       </form>
+    </div>
+</div>
